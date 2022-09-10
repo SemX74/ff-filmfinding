@@ -1,0 +1,31 @@
+.TopRated {
+  width: 50%;
+  margin: auto;
+}
+.loading {
+  margin: 2em auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.loading h1 {
+  margin: 0 1em;
+}
+
+.TopRated_li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid orange;
+  padding: 1em;
+}
+.TopRated_li .TopRated-Left h2 {
+  font-size: 30px;
+}
+.TopRated_li .TopRated-Left h6 {
+  font-size: 20px;
+}/*# sourceMappingURL=TopRated.css.map */

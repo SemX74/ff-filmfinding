@@ -1,32 +1,29 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { IFilm, FilmList, Genres } from "./Interfaces/Interfaces";
 
-export interface IHomeStateValue {
-    poster_path: string;
-    adult: boolean;
-    overview: string;
-    release_date: string;
-    genre_ids: number[];
-    id: number;
-    original_title: string;
-    original_language: string;
-    title: string;
-    backdrop_path: string;
-    popularity: number;
-    vote_count: number;
-    video: boolean;
-    vote_average: number;
-  }
+const KEY = "53157666186b4a1196d3899b3ea17ee1";
+
 // Define a service using a base URL and expected endpoints
 export const filmsApi = createApi({
-  reducerPath: 'filmsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://pokeapi.co/api/v2/' }),
+  reducerPath: "filmsApi",
+  baseQuery: fetchBaseQuery({ baseUrl: "https://api.themoviedb.org/3/" }),
   endpoints: (builder) => ({
-    getFilmsByName: builder.query<IHomeStateValue, string>({
-      query: (name) => `Films/${name}`,
+    getAllGenres: builder.query<Genres, string>({
+      query: () => `genre/movie/list?api_key=${KEY}`,
+    }),
+    getPopularFilms: builder.query<FilmList, string>({
+      query: () => `movie/popular?api_key=${KEY}&page=1`,
+    }),
+    getTopRatedFilms: builder.query<FilmList, string>({
+      query: () => `movie/top_rated?api_key=${KEY}&page=1`,
     }),
   }),
-})
+});
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetFilmsByNameQuery } = filmsApi
+export const {
+  useGetAllGenresQuery,
+  useGetPopularFilmsQuery,
+  useGetTopRatedFilmsQuery,
+} = filmsApi;

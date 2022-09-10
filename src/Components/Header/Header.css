@@ -1,4 +1,8 @@
 header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  opacity: 0.9;
   max-width: 100%;
   padding: 0.7em 2em;
   color: #fff;
@@ -7,23 +11,58 @@ header {
   justify-content: flex-end;
   align-items: center;
 }
+@-webkit-keyframes linearIN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@keyframes linearIN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
 header .Nav-Link {
   color: #fff;
   text-decoration: none;
   margin: 0 0.5em;
   font-size: 25px;
   padding: 0.3em;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 header .Nav-Link:hover {
   color: orange;
 }
+header .active {
+  position: relative;
+  overflow: hidden;
+}
+header .active:before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: orange;
+  -webkit-animation: linearIN 0.1s;
+          animation: linearIN 0.1s;
+}
 header .Header_profile {
+  border: 1px solid #fff;
   margin-left: auto;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 20px;
   font-weight: 500;
+  border-radius: 10px;
   padding: 0.4em;
   transition: 0.2s;
 }
@@ -33,9 +72,9 @@ header .Header_profile svg {
   height: auto;
 }
 header .Header_profile:hover {
+  border: 1px solid orange;
   cursor: pointer;
   background-color: orange;
-  border-radius: 10px;
   color: #000;
 }
 header h1 {

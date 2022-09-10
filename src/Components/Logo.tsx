@@ -1,15 +1,15 @@
 import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 
-interface LogoProps {
-    
-}
- 
+interface LogoProps {}
+
 const Logo: FC<LogoProps> = () => {
-    return ( 
-        <div>
-            
-        </div>
-     );
-}
- 
+  const navigate = useNavigate();
+  return (
+    <h1 onClick={() => navigate("/")}>
+      Find<span>Films</span>
+    </h1>
+  );
+};
+
 export default Logo;

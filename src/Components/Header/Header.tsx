@@ -1,38 +1,44 @@
 import { FC } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { CgProfile } from "react-icons/cg";
 
 import "./Header.css";
+import Logo from "../Logo";
 
 interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   const navigate = useNavigate();
+  const activeClassName = (isActive: boolean) => {
+    if (isActive) {
+      return "Nav-Link active";
+    } else {
+      return "Nav-Link";
+    }
+  };
 
   return (
     <header>
-      <h1 onClick={() => navigate("/")}>
-        Find<span>Films</span>
-      </h1>
+      <Logo />
       <nav>
-        <Link className="Nav-Link" to="/">
+        <NavLink className={({ isActive }) => activeClassName(isActive)} to="/">
           Home
-        </Link>
-        <Link className="Nav-Link" to="films">
+        </NavLink>
+        <NavLink className={({ isActive }) => activeClassName(isActive)} to="films">
           Films
-        </Link>
-        <Link className="Nav-Link" to="series">
-          Serials
-        </Link>
-        <Link className="Nav-Link" to="/">
+        </NavLink>
+        <NavLink className={({ isActive }) => activeClassName(isActive)} to="genres">
+          Genres
+        </NavLink>
+        <NavLink className={({ isActive }) => activeClassName(isActive)} to="/recent">
           Recent
-        </Link>
+        </NavLink>
+        <NavLink className={({ isActive }) => activeClassName(isActive)} to="/goat">
+          Greatest
+        </NavLink>
       </nav>
-      <aside
-        className="Header_profile"
-        onClick={() => navigate("profile")}
-      >
+      <aside className="Header_profile" onClick={() => navigate("profile")}>
         <CgProfile />
         Cabinet
       </aside>
