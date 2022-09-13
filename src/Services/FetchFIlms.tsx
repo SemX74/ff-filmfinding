@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IFilm, FilmList, Genres, FilmDescription, } from "./Interfaces/Interfaces";
+import { IFilm, FilmList, Genres, FilmDescription, FilmCredits, } from "./Interfaces/Interfaces";
 const KEY = "53157666186b4a1196d3899b3ea17ee1";
 
 // Define a service using a base URL and expected endpoints
@@ -22,6 +22,9 @@ export const filmsApi = createApi({
     getSimilarFilmsById: builder.query<FilmList, number>({
       query: (id) => `movie/${id}/similar?api_key=${KEY}&page=1`,
     }),
+    getCastById: builder.query<FilmCredits, number>({
+      query: (id) => `movie/${id}/credits?api_key=${KEY}`,
+    }),
   }),
 });
 
@@ -32,5 +35,6 @@ export const {
   useGetPopularFilmsQuery,
   useGetTopRatedFilmsQuery,
   useGetFilmByIdQuery,
-  useGetSimilarFilmsByIdQuery
+  useGetSimilarFilmsByIdQuery,
+  useGetCastByIdQuery
 } = filmsApi;

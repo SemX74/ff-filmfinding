@@ -58,4 +58,59 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.Cast {
+  margin: 2em;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.Cast .Cast_wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.5em;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.Cast .Cast_wrapper .info_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.751);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.2s;
+}
+.Cast .Cast_wrapper .info_wrapper .info_wrapper-info {
+  padding: 1em;
+}
+.Cast .Cast_wrapper .info_wrapper .info_wrapper-info p {
+  font-size: 20px;
+  color: #fff;
+  width: 100%;
+  word-wrap: break-word;
+}
+.Cast .Cast_wrapper .info_wrapper:hover {
+  opacity: 100;
+}
+.Cast .Cast_wrapper .Cast_img {
+  width: 100%;
+  height: auto;
+}
+.Cast .Cast_wrapper .Cast_imgNull {
+  width: 150px;
+  height: 100px;
+  background: rgb(0, 0, 0);
 }/*# sourceMappingURL=FilmComponents.css.map */

@@ -14,7 +14,7 @@ const Card: FC<CardProps> = ({ data }) => {
     <div className="Card">
       <img src={`https://image.tmdb.org/t/p/w200${data.poster_path}`} alt="" />
       <section
-        onClick={() => navigate(`film/${data.id}`)}
+        onClick={() => navigate(`/film/${data.id}`)}
         className="Card-Info"
       >
         <div className="Card-info_text">

@@ -16,8 +16,9 @@ const Film: React.FC<FilmProps> = () => {
   const { id } = useParams();
   const filmID = Number(id);
   const { data, isLoading } = useGetFilmByIdQuery(filmID);
-  const { data:similarFilms } = useGetSimilarFilmsByIdQuery(filmID);
+  const { data: similarFilms } = useGetSimilarFilmsByIdQuery(filmID);
   const [isPlaying, setIsPlaying] = useState(false);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   const activeClassName = (isActive: boolean) => {
     if (isActive) {
