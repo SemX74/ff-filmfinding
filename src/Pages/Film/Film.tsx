@@ -1,16 +1,22 @@
 import { NavLink, Outlet, useParams } from "react-router-dom";
 import Spinner from "react-spinner-material";
-import { useGetFilmByIdQuery } from "../../Services/FetchFIlms";
+import {
+  useGetFilmByIdQuery,
+  useGetPopularFilmsQuery,
+  useGetSimilarFilmsByIdQuery,
+} from "../../Services/FetchFIlms";
 import { GiPauseButton } from "react-icons/gi";
 import "./Film.css";
 import { useState } from "react";
 import PlayerInfo from "./PlayerInfo";
+import { Sliderr } from "../../Components/Slider/Slider";
 interface FilmProps {}
 
 const Film: React.FC<FilmProps> = () => {
   const { id } = useParams();
   const filmID = Number(id);
   const { data, isLoading } = useGetFilmByIdQuery(filmID);
+  const { data:similarFilms } = useGetSimilarFilmsByIdQuery(filmID);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const activeClassName = (isActive: boolean) => {
@@ -43,7 +49,7 @@ const Film: React.FC<FilmProps> = () => {
               <NavLink
                 className={({ isActive }) => activeClassName(isActive)}
                 to=""
-                end 
+                end
               >
                 Description
               </NavLink>
@@ -67,6 +73,7 @@ const Film: React.FC<FilmProps> = () => {
               </NavLink>
             </nav>
             <Outlet />
+            <Sliderr data={similarFilms} />
           </section>
         </>
       )}

@@ -19,6 +19,9 @@ export const filmsApi = createApi({
     getFilmById: builder.query<FilmDescription, number>({
       query: (id) => `movie/${id}?api_key=${KEY}`,
     }),
+    getSimilarFilmsById: builder.query<FilmList, number>({
+      query: (id) => `movie/${id}/similar?api_key=${KEY}&page=1`,
+    }),
   }),
 });
 
@@ -28,5 +31,6 @@ export const {
   useGetAllGenresQuery,
   useGetPopularFilmsQuery,
   useGetTopRatedFilmsQuery,
-  useGetFilmByIdQuery
+  useGetFilmByIdQuery,
+  useGetSimilarFilmsByIdQuery
 } = filmsApi;

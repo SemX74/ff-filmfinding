@@ -7,6 +7,8 @@ import { useGetPopularFilmsQuery } from "../../Services/FetchFIlms";
 interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
+  const { data } = useGetPopularFilmsQuery("");
+
   return (
     <div>
       <section className="Home-main">
@@ -14,7 +16,7 @@ const Home: FC<HomeProps> = () => {
           Easily find and watch films everywhere <BsFilm />
         </h2>
       </section>
-      <Sliderr />
+      <Sliderr data={data} />
     </div>
   );
 };

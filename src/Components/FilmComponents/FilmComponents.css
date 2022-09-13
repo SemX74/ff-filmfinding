@@ -41,7 +41,7 @@
 .Description-footer {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .Description-footer div {
   margin: 3em 1em;

@@ -7,10 +7,10 @@ import { BsArrow90DegLeft } from "react-icons/bs";
 import { BsArrow90DegRight } from "react-icons/bs";
 import Card from "../Card/Card";
 import { useGetPopularFilmsQuery } from "../../Services/FetchFIlms";
+import Spinner from "react-spinner-material";
 
 
-const Sliderr = () => {
-  const { data } = useGetPopularFilmsQuery("");
+const Sliderr = ({ data }) => {
   const navigate = useNavigate()
   const ref = useRef()
   const settings = {
@@ -19,11 +19,12 @@ const Sliderr = () => {
     slidesToShow: 5,
     slidesToScroll: 5,
   };
+  console.log(data);
   return (
     <div className="Sliderr">
       <div className="Slider-wrapper">
         <Slider className="Slider" ref={ref} {...settings}>
-          {data && data.results.map((film) => <Card data={film} />)}
+          {data && data.results.map((film) => <Card key={film.id} data={film} />)}
         </Slider>
       </div>
       <div className="Slider-buttons">
