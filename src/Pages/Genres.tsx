@@ -5,7 +5,7 @@ import { useGetAllGenresQuery } from "../Services/FetchFIlms";
 interface GenresProps {}
 
 const Genres: FC<GenresProps> = () => {
-  const { data, error, isLoading } = useGetAllGenresQuery("");
+  const { data, error, isLoading,} = useGetAllGenresQuery("");
 
   return (
     <section>

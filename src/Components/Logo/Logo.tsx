@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
-
+import "./Logo.css"
 interface LogoProps {}
 
 const Logo: FC<LogoProps> = () => {

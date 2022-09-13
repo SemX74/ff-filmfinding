@@ -2,6 +2,7 @@
   width: 50%;
   margin: auto;
 }
+
 .loading {
   margin: 2em auto;
   width: -webkit-fit-content;
@@ -16,6 +17,7 @@
 }
 
 .TopRated_li {
+  cursor: pointer;
   list-style: none;
   display: flex;
   justify-content: space-between;

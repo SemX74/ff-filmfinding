@@ -1,0 +1,54 @@
+.Description-info {
+  margin-top: 2em;
+  color: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+.Description-info_header {
+  font-weight: 700;
+}
+.Description-info_runtime {
+  opacity: 0.4;
+  font-size: 20px;
+}
+.Description-info_overview {
+  width: 40%;
+  font-size: 20px;
+}
+.Description-info_tagline {
+  opacity: 0.8;
+  font-size: 30px;
+  font-weight: 100;
+}
+.links_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  button {
+    margin: 1em;
+    padding: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.389);
+    background: #fff;
+    color: orange;
+    border-radius: 5px;
+  }
+}
+.Description-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  div {
+    margin: 3em 1em;
+    width: 25%;
+  }
+}
+.Description-footer_title {
+  opacity: 0.6;
+  font-weight: 600;
+}
+.Description-footer_companies {
+  .companies {
+    text-align: center;
+    width: fit-content;
+  }
+}

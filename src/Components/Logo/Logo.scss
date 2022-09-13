@@ -1,0 +1,12 @@
+h1 {
+  padding-top: 0.3em;
+  margin-right: 2em;
+  span {
+    border-radius: 10px;
+    color: #000;
+    background-color: orange;
+  }
+}
+h1:hover {
+  cursor: pointer;
+}

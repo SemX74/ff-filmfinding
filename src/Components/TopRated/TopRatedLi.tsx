@@ -2,12 +2,17 @@ import { FC } from "react";
 import { IFilm } from "../../Services/Interfaces/Interfaces";
 import { useFindGenreById } from "../../Helpers/FindGenre";
 import "./TopRated.css";
+import { useNavigate } from "react-router-dom";
 interface TopRatedLiProps {
   data: IFilm;
 }
 const TopRatedLi: FC<TopRatedLiProps> = ({ data }) => {
+  const navigate = useNavigate();
   return (
-    <li className="TopRated_li">
+    <li
+      onClick={() => navigate(`/film/${data.id}`)}
+      className="TopRated_li"
+    >
       <figure>
         <img
           src={`https://image.tmdb.org/t/p/w200${data.poster_path}`}

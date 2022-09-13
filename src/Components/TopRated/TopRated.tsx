@@ -3,6 +3,7 @@ import { useGetTopRatedFilmsQuery } from "../../Services/FetchFIlms";
 import TopRatedLi from "./TopRatedLi";
 import "./TopRated.css";
 import Spinner from "react-spinner-material";
+import Card from "../Card/Card";
 interface TopRatedProps {}
 
 const TopRated: FC<TopRatedProps> = () => {

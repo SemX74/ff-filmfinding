@@ -1,10 +1,11 @@
 header {
+  z-index: 1000;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   opacity: 0.9;
   max-width: 100%;
-  padding: 0.7em 2em;
+  padding: 0.2em 2em;
   color: #fff;
   background-color: #000;
   display: flex;
@@ -51,8 +52,8 @@ header .active:before {
   width: 100%;
   height: 3px;
   background: orange;
-  -webkit-animation: linearIN 0.1s;
-          animation: linearIN 0.1s;
+  -webkit-animation: linearIN 0.2s;
+          animation: linearIN 0.2s;
 }
 header .Header_profile {
   border: 1px solid #fff;
@@ -76,17 +77,4 @@ header .Header_profile:hover {
   cursor: pointer;
   background-color: orange;
   color: #000;
-}
-header h1 {
-  margin-right: 2em;
-}
-header h1 span {
-  border-radius: 10px;
-  padding: 0.1em;
-  margin: 0.1em;
-  color: #000;
-  background-color: orange;
-}
-header h1:hover {
-  cursor: pointer;
 }/*# sourceMappingURL=Header.css.map */

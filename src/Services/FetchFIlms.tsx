@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IFilm, FilmList, Genres } from "./Interfaces/Interfaces";
-
+import { IFilm, FilmList, Genres, FilmDescription, } from "./Interfaces/Interfaces";
 const KEY = "53157666186b4a1196d3899b3ea17ee1";
 
 // Define a service using a base URL and expected endpoints
@@ -17,6 +16,9 @@ export const filmsApi = createApi({
     getTopRatedFilms: builder.query<FilmList, string>({
       query: () => `movie/top_rated?api_key=${KEY}&page=1`,
     }),
+    getFilmById: builder.query<FilmDescription, number>({
+      query: (id) => `movie/${id}?api_key=${KEY}`,
+    }),
   }),
 });
 
@@ -26,4 +28,5 @@ export const {
   useGetAllGenresQuery,
   useGetPopularFilmsQuery,
   useGetTopRatedFilmsQuery,
+  useGetFilmByIdQuery
 } = filmsApi;

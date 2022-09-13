@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 
 import "./Header.css";
-import Logo from "../Logo";
+import Logo from "../Logo/Logo";
 
 interface HeaderProps {}
 

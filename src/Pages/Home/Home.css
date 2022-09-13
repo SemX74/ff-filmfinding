@@ -1,0 +1,23 @@
+.Home-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #000;
+  width: 100%;
+  height: 10vh;
+}
+.Home-main h1 {
+  text-align: center;
+  color: white;
+}
+
+.Home-title {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 228, 178);
+  align-items: center;
+}
+.Home-title svg {
+  margin: 0 0.5em;
+}/*# sourceMappingURL=Home.css.map */
