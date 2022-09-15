@@ -1,29 +1,20 @@
+import { useParams } from "react-router-dom";
+import { useGetImagesByIdQuery } from "../../Services/FetchFIlms";
+
 interface GalleryProps {}
 
 const Gallery: React.FC<GalleryProps> = () => {
+  const { id } = useParams();
+  const { data, isLoading } = useGetImagesByIdQuery(Number(id));
   return (
     <>
       <section className="Gallery-info">
-        <p>Gallery</p>
-        <p>
-          <span>FullHD</span> 120mit
-        </p>
-        <p>Descriptio</p>
-        <p></p>
-      </section>
-      <section className="Gallery-footer">
-        <div>
-          <p></p>
-          <p></p>
-        </div>
-        <div>
-          <p></p>
-          <p></p>
-        </div>
-        <div>
-          <p></p>
-          <p></p>
-        </div>
+        {data &&
+          data.backdrops.map((image) => (
+            <div className="Gallery-scroll">
+              <img src={`https://image.tmdb.org/t/p/w300${image.file_path}`} alt="" />
+            </div>
+          ))}
       </section>
     </>
   );

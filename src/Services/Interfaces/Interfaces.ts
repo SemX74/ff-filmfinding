@@ -76,6 +76,7 @@ export interface FilmDescription {
   vote_count: number;
 }
 
+// Similar 
 
 export interface SimilarFilmsResult {
   adult: boolean;
@@ -100,7 +101,7 @@ export interface SimilarFilms {
   total_pages: number;
   total_results: number;
 }
-
+// Cast / Creew
 
 export interface Cast {
   adult: boolean;
@@ -137,3 +138,57 @@ export interface FilmCredits {
   crew: Crew[];
 }
 
+// Images 
+
+export interface Backdrop {
+  aspect_ratio: number;
+  file_path: string;
+  height: number;
+  iso_639_1?: any;
+  vote_average: number;
+  vote_count: number;
+  width: number;
+}
+
+export interface Poster {
+  aspect_ratio: number;
+  file_path: string;
+  height: number;
+  iso_639_1: string;
+  vote_average: number;
+  vote_count: number;
+  width: number;
+}
+
+export interface GetImages {
+  id: number;
+  backdrops: Backdrop[];
+  posters: Poster[];
+}
+
+// Comments
+
+export interface AuthorDetails {
+  name: string;
+  username: string;
+  avatar_path: string;
+  rating?: number;
+}
+
+export interface Result {
+  author: string;
+  author_details: AuthorDetails;
+  content: string;
+  created_at: Date;
+  id: string;
+  updated_at: Date;
+  url: string;
+}
+
+export interface GetComments {
+  id: number;
+  page: number;
+  results: Result[];
+  total_pages: number;
+  total_results: number;
+}

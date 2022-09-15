@@ -1,3 +1,11 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .Description-info {
   margin-top: 2em;
   color: #000;
@@ -113,4 +121,58 @@
   width: 150px;
   height: 100px;
   background: rgb(0, 0, 0);
+}
+
+.Gallery-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  width: 100%;
+  margin: 5em 0;
+}
+.Gallery-info::-webkit-scrollbar {
+  width: 16px;
+}
+
+.Gallery-info::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+}
+
+.Gallery-info::-webkit-scrollbar-thumb {
+  background-color: orange;
+}
+
+.Comments-info .Comment {
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+}
+.Comments-info .Comment .userWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.Comments-info .NoComments {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.avatarComment {
+  border-radius: 50px;
+  width: 50px;
+}
+
+.infoUser_wrapper {
+  margin: 0 1em;
+}
+.infoUser_wrapper .infoUserName {
+  font-weight: 600;
+  margin: 0;
+}
+.infoUser_wrapper .infoUserUsername {
+  margin: 0;
+  opacity: 0.5;
 }/*# sourceMappingURL=FilmComponents.css.map */

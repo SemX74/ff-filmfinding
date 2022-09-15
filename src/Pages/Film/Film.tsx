@@ -74,6 +74,7 @@ const Film: React.FC<FilmProps> = () => {
               </NavLink>
             </nav>
             <Outlet />
+            <h1 className="Similar">Similar movies: </h1>
             <Sliderr data={similarFilms} />
           </section>
         </>

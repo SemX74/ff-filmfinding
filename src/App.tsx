@@ -12,6 +12,7 @@ import Description from "./Components/FilmComponents/Description";
 import Cast from "./Components/FilmComponents/Cast";
 import Gallery from "./Components/FilmComponents/Gallery";
 import Comments from "./Components/FilmComponents/Comments";
+import Find from "./Pages/Find/Find";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<Home />}></Route>
           <Route path="films" element={<Films />}></Route>
           <Route path="genres" element={<Genres />}></Route>
+          <Route path="find" element={<Find />}></Route>
           <Route path="profile" element={<Profile />}></Route>
           <Route path="goat" element={<Goat />}></Route>
           <Route path="film/:id" element={<Film />}>

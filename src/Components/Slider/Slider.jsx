@@ -18,6 +18,7 @@ const Sliderr = ({ data }) => {
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 5,
+    arrows: false
   };
   console.log(data);
   return (
@@ -28,8 +29,12 @@ const Sliderr = ({ data }) => {
         </Slider>
       </div>
       <div className="Slider-buttons">
-        <BsArrow90DegLeft onClick={() => ref.current.slickPrev()} cursor="pointer" />
-        <BsArrow90DegRight onClick={() => ref.current.slickNext()} cursor="pointer" />
+        <button onClick={() => ref.current.slickPrev()}>
+          <BsArrow90DegLeft cursor="pointer" />
+        </button>
+        <button onClick={() => ref.current.slickNext()}>
+          <BsArrow90DegRight cursor="pointer" />
+        </button>
       </div>
     </div>
   );

@@ -31,8 +31,8 @@ const Header: FC<HeaderProps> = () => {
         <NavLink className={({ isActive }) => activeClassName(isActive)} to="genres">
           Genres
         </NavLink>
-        <NavLink className={({ isActive }) => activeClassName(isActive)} to="/recent">
-          Recent
+        <NavLink className={({ isActive }) => activeClassName(isActive)} to="/find">
+          Find
         </NavLink>
         <NavLink className={({ isActive }) => activeClassName(isActive)} to="/goat">
           Greatest

@@ -157,4 +157,8 @@
   background: orange;
   -webkit-animation: linearIN 0.2s;
           animation: linearIN 0.2s;
+}
+
+.Similar {
+  margin: 1em 0;
 }/*# sourceMappingURL=Film.css.map */

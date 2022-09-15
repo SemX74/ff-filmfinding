@@ -1,0 +1,48 @@
+.Find .searchWrapper {
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  height: 40px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.222);
+  border: 1px solid rgba(0, 0, 0, 0.222);
+}
+.Find .searchWrapper .search {
+  font-weight: 600;
+  padding: 1em;
+  background: rgb(227, 227, 227);
+  border-bottom-left-radius: 20px;
+  border: transparent;
+  border-top-left-radius: 20px;
+  height: 100%;
+  width: auto;
+  font-size: 20px;
+}
+.Find .searchWrapper .search:focus {
+  outline: none;
+}
+.Find .searchWrapper .searchButton {
+  font-weight: 700;
+  font-size: 20px;
+  height: 100%;
+  width: auto;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: orange;
+  color: #000;
+  border-bottom-right-radius: 20px;
+  border: transparent;
+  border-top-right-radius: 20px;
+  outline: none;
+  transition: 0.2s;
+}
+.Find .searchWrapper .searchButton:hover {
+  background: #000;
+  color: orange;
+}/*# sourceMappingURL=Find.css.map */
