@@ -1,0 +1,72 @@
+.player {
+  padding: 3em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  opacity: 100;
+  transition: 0.2s;
+}
+.player__image {
+  width: 150px;
+  height: auto;
+}
+.player__info-wrapper {
+  margin: 3em 0 0 3em;
+}
+.player-info__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.player-info-header__text {
+  margin: 0 1em;
+  color: #fff;
+}
+.player-info-header__adult-badge {
+  padding: 0.1em 0.2em;
+  background: red;
+  border-radius: 10px;
+}
+.player-info__title {
+  margin-top: 1em;
+  color: #fff;
+}
+.player-info__buttons {
+  width: fit-content;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-info-buttons__play {
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: orange;
+  font-weight: 500;
+  font-size: 16px;
+  svg {
+    margin: 0 0.5em;
+  }
+}
+.player-info-buttons__like-wrapper {
+  margin: 0 1em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.player-info-buttons-like__text {
+  color: rgba(255, 255, 255, 0.66);
+}
+.player-info-buttons__like-button {
+  margin: auto;
+  background: transparent;
+  svg {
+    color: rgba(255, 255, 255, 0.66);
+  }
+}

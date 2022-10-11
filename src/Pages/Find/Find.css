@@ -1,4 +1,4 @@
-.Find .searchWrapper {
+.find__search-wrapper {
   margin: 1em auto;
   display: flex;
   justify-content: center;
@@ -11,7 +11,8 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.222);
   border: 1px solid rgba(0, 0, 0, 0.222);
 }
-.Find .searchWrapper .search {
+
+.find-search-wrapper__search {
   font-weight: 600;
   padding: 1em;
   background: rgb(227, 227, 227);
@@ -22,10 +23,12 @@
   width: auto;
   font-size: 20px;
 }
-.Find .searchWrapper .search:focus {
+
+.find-search-wrapper__search:focus {
   outline: none;
 }
-.Find .searchWrapper .searchButton {
+
+.find__search-button {
   font-weight: 700;
   font-size: 20px;
   height: 100%;
@@ -42,7 +45,8 @@
   outline: none;
   transition: 0.2s;
 }
-.Find .searchWrapper .searchButton:hover {
+
+.find__search-button:hover {
   background: #000;
   color: orange;
 }/*# sourceMappingURL=Find.css.map */

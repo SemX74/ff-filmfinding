@@ -1,50 +1,40 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-// .Sliderr{
-
-// }
-// .Slider_img{
-//     max-width: 202px;
-//     height: auto;
-//     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
-//     border-radius: 16px;
-// }
-
-.Slider {
+.slider {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.841);
 }
-.Slider-buttons {
-  button {
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid orange;
-    background: #fff;
-    font-weight: 800;
-    transition: 0.2s;
-    color: #000;
-  }
-  button:first-child {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-right: 1px solid orange;
-  }
-  button:last-child {
-    border-left: 1px solid orange;
-
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  button:hover {
-    background: orange;
-    color: #000;
-  }
+.slider-buttons__wrapper {
   width: fit-content;
   display: flex;
   margin-left: 2em;
   margin-top: 1em;
   align-items: center;
   justify-content: center;
+}
+.slider-buttons-wrapper__button {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid orange;
+  background: #fff;
+  font-weight: 800;
+  transition: 0.2s;
+  color: #000;
+}
+.button__left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: 1px solid orange;
+}
+.button__right {
+  border-left: 1px solid orange;
+
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.slider-buttons-wrapper__button:hover {
+  background: orange;
+  color: #000;
 }

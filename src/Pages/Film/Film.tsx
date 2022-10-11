@@ -2,13 +2,12 @@ import { NavLink, Outlet, useParams } from "react-router-dom";
 import Spinner from "react-spinner-material";
 import {
   useGetFilmByIdQuery,
-  useGetPopularFilmsQuery,
   useGetSimilarFilmsByIdQuery,
 } from "../../Services/FetchFIlms";
 import { GiPauseButton } from "react-icons/gi";
 import "./Film.css";
 import { useState } from "react";
-import PlayerInfo from "./PlayerInfo";
+import PlayerInfo from "./PlayerInfo/PlayerInfo";
 import { Sliderr } from "../../Components/Slider/Slider";
 interface FilmProps {}
 
@@ -19,7 +18,7 @@ const Film: React.FC<FilmProps> = () => {
   const { data: similarFilms } = useGetSimilarFilmsByIdQuery(filmID);
   const [isPlaying, setIsPlaying] = useState(false);
   window.scrollTo({ top: 0, behavior: "smooth" });
-
+  const pages = ["", "cast", "gallery", "comments"];
   const activeClassName = (isActive: boolean) => {
     if (isActive) {
       return "FilmNav-Link active";
@@ -33,7 +32,7 @@ const Film: React.FC<FilmProps> = () => {
       {isLoading && <Spinner />}
       {data && (
         <>
-          <div className="Player">
+          <div className="player-wrapper">
             {!isPlaying ? (
               <PlayerInfo data={data} setIsPlaying={setIsPlaying} />
             ) : (
@@ -47,31 +46,15 @@ const Film: React.FC<FilmProps> = () => {
           </div>
           <section className="Film-info_container">
             <nav>
-              <NavLink
-                className={({ isActive }) => activeClassName(isActive)}
-                to=""
-                end
-              >
-                Description
-              </NavLink>
-              <NavLink
-                className={({ isActive }) => activeClassName(isActive)}
-                to="cast"
-              >
-                Team
-              </NavLink>
-              <NavLink
-                className={({ isActive }) => activeClassName(isActive)}
-                to="gallery"
-              >
-                Trailer & Photos
-              </NavLink>
-              <NavLink
-                className={({ isActive }) => activeClassName(isActive)}
-                to="comments"
-              >
-                Comments
-              </NavLink>
+              {pages.map((page) => (
+                <NavLink
+                  className={({ isActive }) => activeClassName(isActive)}
+                  to={page}
+                  end
+                >
+                  {page ? page.toUpperCase() : "DESCRIPTION"}
+                </NavLink>
+              ))}
             </nav>
             <Outlet />
             <h1 className="Similar">Similar movies: </h1>

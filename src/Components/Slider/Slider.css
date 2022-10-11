@@ -1,10 +1,10 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-.Slider {
+.slider {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.841);
 }
 
-.Slider-buttons {
+.slider-buttons__wrapper {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -14,7 +14,8 @@
   align-items: center;
   justify-content: center;
 }
-.Slider-buttons button {
+
+.slider-buttons-wrapper__button {
   padding: 1em;
   display: flex;
   align-items: center;
@@ -25,17 +26,20 @@
   transition: 0.2s;
   color: #000;
 }
-.Slider-buttons button:first-child {
+
+.button__left {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-right: 1px solid orange;
 }
-.Slider-buttons button:last-child {
+
+.button__right {
   border-left: 1px solid orange;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.Slider-buttons button:hover {
+
+.slider-buttons-wrapper__button:hover {
   background: orange;
   color: #000;
 }/*# sourceMappingURL=Slider.css.map */

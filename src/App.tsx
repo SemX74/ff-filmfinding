@@ -8,11 +8,11 @@ import Profile from "./Pages/Profile";
 import Genres from "./Pages/Genres";
 import Goat from "./Pages/Goat";
 import Film from "./Pages/Film/Film";
-import Description from "./Components/FilmComponents/Description";
-import Cast from "./Components/FilmComponents/Cast";
-import Gallery from "./Components/FilmComponents/Gallery";
-import Comments from "./Components/FilmComponents/Comments";
+import Description from "./Components/FilmComponents/Description/Description";
+import Cast from "./Components/FilmComponents/Cast/Cast";
+import Comments from "./Components/FilmComponents/Comments/Comments";
 import Find from "./Pages/Find/Find";
+import Gallery from "./Components/FilmComponents/Gallery/Gallery";
 
 function App() {
   return (

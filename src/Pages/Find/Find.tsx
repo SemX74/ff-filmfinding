@@ -9,18 +9,18 @@ const Find: React.FC<FindProps> = () => {
     setSearchInput(e.target.value);
 
   return (
-    <div className="Find">
-      <div className="searchWrapper">
+    <div className="find">
+      <div className="find__search-wrapper">
         <input
           placeholder="Search..."
           onChange={handleChange}
           value={searchInput}
           type="search"
-          className="search"
+          className="find-search-wrapper__search"
         />
-        <button className="searchButton">Go</button>
+        <button className="find__search-button">Go</button>
       </div>
-      <section className="content"></section>
+      <section className="find__content"></section>
     </div>
   );
 };
