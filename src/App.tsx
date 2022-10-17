@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import Films from "./Pages/Films";
 import Home from "./Pages/Home/Home";
 import Layout from "./Pages/Layout/Layout";
@@ -13,6 +12,7 @@ import Cast from "./Components/FilmComponents/Cast/Cast";
 import Comments from "./Components/FilmComponents/Comments/Comments";
 import Find from "./Pages/Find/Find";
 import Gallery from "./Components/FilmComponents/Gallery/Gallery";
+import "./Styles/App.scss";
 
 function App() {
   return (

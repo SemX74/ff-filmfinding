@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./Footer.css"
+import "./Footer.scss"
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {

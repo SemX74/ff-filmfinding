@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/esm/Carousel";
 import { useNavigate } from "react-router-dom";
 import { useFindGenreById } from "../../Helpers/FindGenre";
 import { IFilm } from "../../Services/Interfaces/Interfaces";
-import "./Card.css";
+import "./Card.scss";
 interface CardProps {
   data: IFilm;
 }

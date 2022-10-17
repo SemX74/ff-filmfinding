@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetCommentsByIdQuery } from "../../../Services/FetchFIlms";
-import "./Comments.css";
+import "./Comments.scss";
 interface CommentsProps {}
 
 const Comments: React.FC<CommentsProps> = () => {

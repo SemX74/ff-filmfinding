@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "./Slider.css";
+import "./Slider.scss";
 import Slider from "react-slick";
 import { BsArrow90DegLeft } from "react-icons/bs";
 import { BsArrow90DegRight } from "react-icons/bs";

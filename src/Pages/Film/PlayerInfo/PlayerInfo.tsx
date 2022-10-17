@@ -1,7 +1,7 @@
 import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
 import { FaPlay } from "react-icons/fa";
 import { FilmDescription } from "../../../Services/Interfaces/Interfaces";
-import "./PlayerInfo.css";
+import "./PlayerInfo.scss";
 
 interface PlayerInfoProps {
   data: FilmDescription;

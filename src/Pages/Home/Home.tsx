@@ -1,9 +1,9 @@
 import { FC } from "react";
 import Logo from "../../Components/Logo/Logo";
 import { BsFilm } from "react-icons/bs";
-import "./Home.css";
 import { Sliderr } from "../../Components/Slider/Slider";
 import { useGetPopularFilmsQuery } from "../../Services/FetchFIlms";
+import "./Home.scss";
 interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {

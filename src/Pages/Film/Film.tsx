@@ -5,10 +5,10 @@ import {
   useGetSimilarFilmsByIdQuery,
 } from "../../Services/FetchFIlms";
 import { GiPauseButton } from "react-icons/gi";
-import "./Film.css";
 import { useState } from "react";
 import PlayerInfo from "./PlayerInfo/PlayerInfo";
 import { Sliderr } from "../../Components/Slider/Slider";
+import "./Film.scss";
 interface FilmProps {}
 
 const Film: React.FC<FilmProps> = () => {

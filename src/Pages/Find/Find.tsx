@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Find.css";
+import "./Find.scss";
 interface FindProps {}
 
 const Find: React.FC<FindProps> = () => {

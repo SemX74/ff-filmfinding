@@ -1,5 +1,5 @@
 import { FilmDescription } from "../../../../Services/Interfaces/Interfaces";
-import "./DescriptionFooter.css";
+import "./DescriptionFooter.scss";
 
 interface DescriptionFooterProps {
   data: FilmDescription;

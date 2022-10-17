@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetCastByIdQuery } from "../../../Services/FetchFIlms";
-import "./Cast.css";
+import "./Cast.scss";
 interface CastProps {}
 
 const Cast: React.FC<CastProps> = () => {

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetImagesByIdQuery } from "../../../Services/FetchFIlms";
-import "./Gallery.css";
+import "./Gallery.scss";
 interface GalleryProps {}
 
 const Gallery: React.FC<GalleryProps> = () => {

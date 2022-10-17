@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Spinner from "react-spinner-material";
 import { useGetFilmByIdQuery } from "../../../Services/FetchFIlms";
-import "./Description.css";
+import "./Description.scss";
 import DescriptionFooter from "./Footer/DescriptionFooter";
 
 interface DescriptionProps {}

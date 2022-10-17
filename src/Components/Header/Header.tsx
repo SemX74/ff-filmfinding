@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 import { CgProfile } from "react-icons/cg";
 
-import "./Header.css";
+import "./Header.scss";
 import Logo from "../Logo/Logo";
 
 interface HeaderProps {}

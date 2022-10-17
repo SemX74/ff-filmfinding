@@ -4,7 +4,7 @@ import { useGetPopularFilmsQuery } from "../../Services/FetchFIlms";
 import Card from "../Card/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./Slider.css";
+import "./Slider.scss";
 
 interface SliderComponentProps {}
 
