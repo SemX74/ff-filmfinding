@@ -1,3 +1,5 @@
+@use "../../Styles/colors";
+
 .find__search-wrapper {
   margin: 1em auto;
   display: flex;
@@ -33,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: orange;
+  background: colors.$orange;
   color: #000;
   border-bottom-right-radius: 20px;
   border: transparent;
@@ -44,5 +46,5 @@
 }
 .find__search-button:hover {
   background: #000;
-  color: orange;
+  color: colors.$orange;
 }

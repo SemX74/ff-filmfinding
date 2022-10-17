@@ -1,21 +1,20 @@
 import { FC } from "react";
-import Logo from "../../Components/Logo/Logo";
 import { BsFilm } from "react-icons/bs";
 import { Sliderr } from "../../Components/Slider/Slider";
 import { useGetPopularFilmsQuery } from "../../Services/FetchFIlms";
 import "./Home.scss";
+import TitlePanel from "../../Components/TitlePanel/TitlePanel";
 interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
   const { data } = useGetPopularFilmsQuery("");
 
   return (
-    <div>
-      <section className="Home-main">
-        <h2 className="Home-title">
-          Easily find and watch films everywhere <BsFilm />
-        </h2>
-      </section>
+    <div className="home">
+      <TitlePanel
+        text={"Easily find and watch films everywhere"}
+        svg={<BsFilm />}
+      />
       <Sliderr data={data} />
     </div>
   );

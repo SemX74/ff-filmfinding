@@ -1,11 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Films from "./Pages/Films";
 import Home from "./Pages/Home/Home";
 import Layout from "./Pages/Layout/Layout";
 import NotFound from "./Pages/NotFound";
 import Profile from "./Pages/Profile";
-import Genres from "./Pages/Genres";
-import Goat from "./Pages/Goat";
+import Genres from "./Pages/Genres/Genres";
+import Goat from "./Pages/Goat/Goat";
 import Film from "./Pages/Film/Film";
 import Description from "./Components/FilmComponents/Description/Description";
 import Cast from "./Components/FilmComponents/Cast/Cast";
@@ -20,7 +19,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />}></Route>
-          <Route path="films" element={<Films />}></Route>
           <Route path="genres" element={<Genres />}></Route>
           <Route path="find" element={<Find />}></Route>
           <Route path="profile" element={<Profile />}></Route>

@@ -24,6 +24,7 @@ export interface FilmList {
 export interface Genre {
   id: number;
   name: string;
+  svg?: string;
 }
 
 export interface Genres {

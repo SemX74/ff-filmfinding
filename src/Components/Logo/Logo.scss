@@ -1,10 +1,15 @@
+@use "../../Styles/colors";
 h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
   padding-top: 0.3em;
   margin-right: 2em;
   span {
-    border-radius: 10px;
+    padding: 0.1em;
+    margin: 0 0.1em;
+    border-radius: 5px;
     color: #000;
-    background-color: orange;
+    background-color: colors.$orange;
   }
 }
 h1:hover {

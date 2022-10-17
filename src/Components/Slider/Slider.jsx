@@ -1,9 +1,9 @@
 import { useRef } from "react";
-import "./Slider.scss";
+import Card from "../Card/Card";
 import Slider from "react-slick";
 import { BsArrow90DegLeft } from "react-icons/bs";
 import { BsArrow90DegRight } from "react-icons/bs";
-import Card from "../Card/Card";
+import "./Slider.scss";
 
 
 const Sliderr = ({ data }) => {
@@ -11,8 +11,8 @@ const Sliderr = ({ data }) => {
   const settings = {
     infinite: true,
     speed: 300,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 7,
+    slidesToScroll: 7,
     arrows: false
   };
   console.log(data);

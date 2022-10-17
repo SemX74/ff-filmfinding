@@ -1,3 +1,5 @@
+@use "../../../Styles/colors";
+
 .player {
   padding: 3em;
   position: absolute;
@@ -46,7 +48,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background: orange;
+  background: colors.$orange;
   font-weight: 500;
   font-size: 16px;
   svg {

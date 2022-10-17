@@ -1,0 +1,20 @@
+@use "../../Styles/colors";
+
+.title-panel__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #000;
+  width: 100%;
+  height: 10vh;
+}
+.title-panel {
+  display: flex;
+  justify-content: center;
+  color: colors.$lightOrange;
+  align-items: center;
+  svg {
+    margin: 0 0.5em;
+  }
+}

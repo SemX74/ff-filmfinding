@@ -38,13 +38,13 @@ const Film: React.FC<FilmProps> = () => {
             ) : (
               <button
                 onClick={() => setIsPlaying(false)}
-                className="PauseButton"
+                className="player__pause-button"
               >
                 <GiPauseButton />
               </button>
             )}
           </div>
-          <section className="Film-info_container">
+          <section className="film__info-container">
             <nav>
               {pages.map((page) => (
                 <NavLink
@@ -57,7 +57,7 @@ const Film: React.FC<FilmProps> = () => {
               ))}
             </nav>
             <Outlet />
-            <h1 className="Similar">Similar movies: </h1>
+            <h1 className="film__similar">Similar movies: </h1>
             <Sliderr data={similarFilms} />
           </section>
         </>

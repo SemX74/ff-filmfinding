@@ -1,0 +1,39 @@
+@use "./../../Styles/colors";
+
+.TopRated {
+  width: 50%;
+  margin: auto;
+}
+
+.goat-card {
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid colors.$lightOrange;
+  padding: 1em;
+}
+.goat-card-__left-wrapper {
+  width: 30%;
+}
+.goat-card__right-wrapper {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 2em;
+  .description__overview {
+    margin: 1em auto;
+    width: 80%;
+    font-size: 18px;
+    font-weight: 200;
+  }
+  .goat-card-right__title {
+    font-size: 32px;
+    font-weight: 200;
+  }
+}
